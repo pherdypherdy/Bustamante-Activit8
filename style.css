@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8fc;
+    color: #493044;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 55px 8% 65px;
+    text-align: center;
+    background-image:
+        linear-gradient(
+            rgba(255, 214, 233, 0.70),
+            rgba(231, 215, 255, 0.70)
+        ),
+        url("dolls.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 5px solid #f3b5da;
+}
+
+.hero::before {
+    content: "♡";
+    position: absolute;
+    left: 7%;
+    top: 5px;
+    font-size: 110px;
+    color: rgba(192, 44, 131, 0.15);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "✧";
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+    font-size: 100px;
+    color: rgba(117, 60, 151, 0.18);
+    pointer-events: none;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    color: #713b83;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    color: #713b83;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a12f78;
+}
+
+.nav-link {
+    color: #713b83;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 16px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #c02c83;
+    color: #ffffff;
+}
+
+
+
+.hero-content {
+    max-width: 850px;
+    margin: 85px auto 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: #b33d85;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: #c02c83;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 580px;
+    margin: 0 auto 28px;
+    color: #674b70;
+    font-size: 17px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #d23b91, #a72b88);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(165, 43, 120, 0.20);
+   
+}
+
+.button:hover {
+    background: #852164;
+    transform: translateY(-3px);
+}
+
+.back-button {
+    margin-top: 5px;
+}
+
+
+.about {
+    background-color: #ffffff;
+}
+
+.about > p:last-child {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+
+.members {
+    background-image:
+        linear-gradient(
+            rgba(65, 25, 75, 0.55),
+            rgba(65, 25, 75, 0.70)
+        ),
+        url("dolls.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 70px 8%;
+    position: relative;
+}
+
+.members-section h2 {
+    color: #ffffff;
+}
+
+.section-description {
+    color: #ffe8f5;
+    margin-bottom: 35px;
+}
+
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+.member-card {
+    --card-bg: #fff0f7;
+    --card-border: #f3b5da;
+    --card-text: #943675;
+
+    display: block;
+    background: var(--card-bg);
+    padding: 25px 18px;
+    border: 2px solid var(--card-border);
+    border-radius: 22px;
+    color: #493044;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(30, 10, 40, 0.12);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.member-card h3 {
+    color: var(--card-text);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 14px;
+    color: #654b65;
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(30, 10, 40, 0.25);
+}
+
+
+
+.member-card:nth-child(1) {
+    --card-bg: #ffe5f0;
+    --card-border: #f2a9cb;
+    --card-text: #a12f68;
+}
+
+
+
+.member-card:nth-child(2) {
+    --card-bg: #eee5ff;
+    --card-border: #c7a8f2;
+    --card-text: #7042a0;
+}
+
+
+
+.member-card:nth-child(3) {
+    --card-bg: #fff0e5;
+    --card-border: #f2c09d;
+    --card-text: #a65c35;
+}
+
+
+
+.member-card:nth-child(4) {
+    --card-bg: #e5f4ff;
+    --card-border: #a8d5f2;
+    --card-text: #356c9c;
+}
+
+
+
+.member-card:nth-child(5) {
+    --card-bg: #e5f8ed;
+    --card-border: #a8dfbf;
+    --card-text: #347653;
+}
+
+
+.member-card:nth-child(6) {
+    --card-bg: #fff7d9;
+    --card-border: #eed78a;
+    --card-text: #8c6a1d;
+}
+
+
+
+.member-card:nth-child(7) {
+    --card-bg: #f6e5ff;
+    --card-border: #d8b0ef;
+    --card-text: #8245a0;
+}
+
+
+
+.member-photo {
+    width: 100%;
+    max-width: 220px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    margin: 0 auto 15px;
+    display: block;
+}
+
+
+
+.profile {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #f1cde2;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(119, 56, 111, 0.10);
+}
+
+.profile-photo {
+    display: block;
+    width: 220px;
+    height: 260px;
+    margin: 0 auto 25px;
+    object-fit: cover;
+    object-position: center top;
+    border: 6px solid #fff0f7;
+    outline: 2px solid #e6a5ce;
+    border-radius: 20px;
+    background-color: #f6dced;
+}
+
+.profile h2 {
+    color: #a12f78;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.profile h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #e65ca6, #a875dc);
+}
+
+.profile > p {
+    max-width: 680px;
+    margin: 0 auto 12px;
+    padding: 13px 17px;
+    border-radius: 12px;
+    background-color: #fff7fb;
+    border: 1px solid #f7e4ef;
+    color: #654b65;
+    text-align: left;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.profile > p strong {
+    display: inline-block;
+    color: #a12f78;
+    min-width: 125px;
+}
+
+.profile > p:last-child {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff0f7, #f5edff);
+    border-color: #ebcde8;
+    line-height: 1.9;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(120deg, #50305f, #713b83);
+    color: #ffffff;
+    border-top: 5px solid #e8a3ce;
+}
+
+footer p:first-child {
+    color: #ffe0f0;
+    font-weight: bold;
+}
+
+.footer-small {
+    font-size: 12px;
+    color: #e6d5ed;
+}
+
+@media (max-width: 850px) {
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .profile {
+        padding: 30px 22px;
+    }
+
+    .members-section {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero {
+        padding: 45px 18px 50px;
+    }
+
+    .hero::before {
+        left: -10px;
+        font-size: 75px;
+    }
+
+    .hero::after {
+        right: 0;
+        font-size: 75px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 35px 16px;
+    }
+
+    .profile {
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    .profile-photo {
+        width: 190px;
+        height: 230px;
+    }
+
+    .profile h2 {
+        font-size: 24px;
+    }
+
+    .profile > p {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .profile > p strong {
+        min-width: 0;
+        margin-right: 5px;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .member-card {
+        padding: 12px 8px 18px;
+    }
+
+    .member-photo {
+        height: 170px;
+    }
+
+    .member-card h3 {
+        font-size: 14px;
+    }
+
+    .member-card p {
+        font-size: 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        margin-top: 55px;
+    }
+}
